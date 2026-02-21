@@ -44,16 +44,16 @@ Imagine o algoritmo para uma porta automática simples. Note como a lógica e a 
 
 <div class="code-block">
     <div class="code-block__header">
-        <span>Logic Flow</span>
+        <span>Fluxo Lógico</span>
         <button class="code-block__copy" onclick="copyCode(this)">Copiar</button>
     </div>
-    <pre><code>// Pseudocode for an Automatic Door System
-// 1. Constant monitoring of the motion sensor
-// 2. If movement is detected:
-//      a. Check if the door is already open
-//      b. If not, trigger the motor to open
-//      c. Wait for 5 seconds of inactivity
-//      d. Close the door safely
-// 3. Else:
-//      a. Keep the door locked and save energy</code></pre>
+    <pre><code>// Pseudocódigo para um Sistema de Porta Automática
+// 1. Monitoramento constante do sensor de movimento
+// 2. Se um movimento for detectado:
+//      a. Verifica se a porta já está aberta
+//      b. Se não estiver, aciona o motor para abrir
+//      c. Aguarda 5 segundos de inatividade
+//      d. Fecha a porta
+// 3. Caso contrário:
+//      a. Mantém a porta travada e economiza energia</code></pre>
 </div>
