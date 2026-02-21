@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByVitor</title>
+    <meta name="description"
+        content="Explore o portfólio de Vitor: Ferramentas open source, sistemas distribuídos e experimentos de alta performance.">
+    <meta name="keywords" content="projetos, open source, github, vBrands, vEconomy, vPortrait, java, performance">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://byvitor.com.br/projects.html">
+    <meta property="og:title" content="ByVitor">
+    <meta property="og:description"
+        content="Ferramentas, sistemas e experimentos. Tudo open source, documentado e com propósito claro.">
+    <meta property="og:image" content="images/logos/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="ByVitor">
+    <meta property="twitter:image" content="images/logos/logo.png">
+
+    <link rel="icon" type="image/png" href="images/logos/logo.png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="page-transition">
+    <main>
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero bg-particles">
+            <div class="page-hero__bg"></div>
+            <div class="container">
+                <div class="section-label">Portfólio</div>
+                <h1 class="page-hero__title">
+                    Projetos que <span class="gradient-text-animated">resolvem problemas reais</span>
+                </h1>
+                <p class="page-hero__desc">
+                    Ferramentas, sistemas e experimentos. Tudo open source, documentado e com propósito claro.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== OPEN SOURCE APPRECIATION ===== -->
+        <section class="section--sm">
+            <div class="container">
+                <div class="opensource-banner reveal">
+                    <div class="opensource-banner__icon">
+                        <i class="fa-brands fa-osi"></i>
+                    </div>
+                    <div class="opensource-banner__content">
+                        <h3 class="opensource-banner__title">Orgulho de ser Open Source</h3>
+                        <p class="opensource-banner__text">
+                            Eu acredito na comunidade Open Source e tenho orgulho de contribuir com projetos públicos.
+                            Tudo que está nessa página é código aberto — você pode ler, aprender, contribuir e usar.
+                            O Open Source muda o mundo porque coloca o conhecimento nas mãos de quem quer aprender,
+                            não de quem quer vender. Obrigado a cada pessoa que mantém essa filosofia viva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FILTERS ===== -->
+        <section class="section--sm">
+            <div class="container">
+                <div class="filter-bar" id="project-filters">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS GRID ===== -->
+        <section class="section--sm">
+            <div class="container">
+                <div class="grid grid-3" id="projects-grid">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section">
+            <div class="container text-center reveal">
+                <h2 class="section-title">Tem uma ideia? Vamos construir juntos.</h2>
+                <p class="section-desc" style="margin: 0 auto var(--space-xl);">Se você tem um projeto interessante ou
+                    quer colaborar, me chama.</p>
+                <a href="index.html#contato" class="btn btn--primary btn--lg">Entrar em contato →</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/wave.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initProjectsPage();
+        });
+    </script>
+</body>
+
+</html>
