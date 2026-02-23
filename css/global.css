@@ -130,6 +130,12 @@ body {
     line-height: var(--lh-normal);
     color: var(--text);
     background-color: var(--bg);
+    /* IE 10+ */
+    -webkit-user-select: none;
+    /* IE 10+ */
+    -ms-user-select: none;
+    /* Standard */
+    user-select: none;
     /* Anti-aliasing */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
