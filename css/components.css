@@ -790,13 +790,36 @@ main {
     font-size: var(--fs-xl);
     font-weight: var(--fw-bold);
     color: var(--heading);
-    margin-bottom: var(--space-lg);
     display: inline-block;
     letter-spacing: -0.04em;
 }
 
 .footer__logo span {
     color: var(--accent);
+}
+
+.footer__logo-container {
+    display: flex;
+    align-items: center;
+    /* Changed back to center for image-text alignment */
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.footer__logo-separator {
+    color: var(--text-muted);
+    font-size: var(--fs-md);
+    font-weight: 300;
+    opacity: 0.8;
+    user-select: none;
+}
+
+.footer__logo-gemini-img {
+    height: 30px;
+    width: auto;
+    opacity: 1;
+    pointer-events: none;
+    user-select: none;
 }
 
 .footer__tagline {

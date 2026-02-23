@@ -64,7 +64,11 @@
       <div class="container overflow-hidden">
         <div class="footer__grid">
           <div class="footer__brand-side">
-            <a href="index.html" class="footer__logo">By<span>Vitor</span></a>
+            <div class="footer__logo-container">
+              <a href="index.html" class="footer__logo">By<span>Vitor</span></a>
+              <span class="footer__logo-separator">x</span>
+              <img src="images/logos/gemini.png" alt="Gemini" class="footer__logo-gemini-img">
+            </div>
             <p class="footer__tagline">
               Engenharia de software focada em performance e escala. Construindo hoje os sistemas que aguentam o amanhã.
             </p>
