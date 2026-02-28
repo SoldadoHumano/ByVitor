@@ -41,7 +41,7 @@ Veja como diferentes métodos de pagamento calculam suas próprias taxas de form
         System.out.println("Processando pagamento genérico de R$" + valor);
     }
 }
-
+ㅤㅤ
 class PagamentoCartao extends Pagamento {
     @Override
     public void processar(double valor) {
@@ -62,12 +62,10 @@ public class Sistema {
         // Usando o polimorfismo: referências do tipo pai, objetos do tipo filho
         Pagamento p1 = new PagamentoCartao();
         Pagamento p2 = new PagamentoPix();
-        ㅤㅤ
+ㅤㅤ
         // O Java decide qual método chamar na hora da execução
         p1.processar(100.00); // Saída: Pagamento no Cartão...
         p2.processar(100.00); // Saída: Pagamento via Pix...
     }
 }</code></pre>
-
 </div>
-
