@@ -178,7 +178,40 @@ const SITE_DATA = {
                     contentPath: 'content/inputoutput/results.md'
                 }
             }
-        }
+        },
+        'Programação Orientada a Objetos': {
+            icon: '',
+            topics: {
+                'classesobjects': {
+                    title: 'Classes e Objetos',
+                    contentPath: 'content/poo/classesobjects.md'
+                },
+                'attributesmethods': {
+                    title: 'Atributos e Métodos',
+                    contentPath: 'content/poo/attributesmethods.md'
+                },
+                'constructors': {
+                    title: 'Construtores',
+                    contentPath: 'content/poo/constructors.md'
+                },
+                'encapsulation': {
+                    title: 'Encapsulamento',
+                    contentPath: 'content/poo/encapsulation.md'
+                },
+                'inheritance': {
+                    title: 'Herança',
+                    contentPath: 'content/poo/inheritance.md'
+                },
+                'polymorphism': {
+                    title: 'Polimorfismo',
+                    contentPath: 'content/poo/polymorphism.md'
+                },
+                'interfacesabstract': {
+                    title: 'Interfaces e Classes Abstratas',
+                    contentPath: 'content/poo/interfacesabstract.md'
+                }
+            }
+        },
     },
 
     /* ====================== 404 PHRASES ====================== */
