@@ -86,10 +86,10 @@
           <div class="footer__social-group">
             <h4 class="footer__title">Fale Comigo</h4>
             <div class="footer__socials">
-            <a href="#" target="_blank" class="footer__link">
+            <a href="https://www.instagram.com/vitor1227_op/" target="_blank" class="footer__link">
                 <i class="fa-brands fa-instagram"></i> Instagram
               </a>
-              <a href="#" target="_blank" class="footer__link">
+              <a href="https://www.threads.com/@vitor1227_op" target="_blank" class="footer__link">
                 <i class="fa-brands fa-threads"></i> Threads
               </a>
               <a href="https://github.com/SoldadoHumano" target="_blank" class="footer__link">
