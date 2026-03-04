@@ -87,7 +87,7 @@ const SITE_DATA = {
     /* ====================== LEARN TOPICS ====================== */
     learn: {
         'Introdução': {
-            icon: '👋',
+            icon: '',
             topics: {
                 'welcome': {
                     title: 'Boas Vindas',
@@ -108,7 +108,7 @@ const SITE_DATA = {
             }
         },
         'Estruturas de Controle': {
-            icon: '🔄',
+            icon: '',
             topics: {
                 'sequence': {
                     title: 'Sequência',
@@ -129,7 +129,7 @@ const SITE_DATA = {
             },
         },
         'Variáveis e Tipos de Dados': {
-            icon: '📦',
+            icon: '',
             topics: {
                 'primitivetypes': {
                     title: 'Tipos Primitivos',
@@ -146,7 +146,7 @@ const SITE_DATA = {
             }
         },
         'Operadores': {
-            icon: '🧮',
+            icon: '',
             topics: {
                 'arithmetic': {
                     title: 'Operadores Aritméticos',
@@ -167,7 +167,7 @@ const SITE_DATA = {
             }
         },
         'Entrada e Saída': {
-            icon: 'I/O',
+            icon: '',
             topics: {
                 'inputoutput': {
                     title: 'Conceito de Entrada e Saída',
@@ -212,6 +212,71 @@ const SITE_DATA = {
                 }
             }
         },
+        'Fundamentos Avançados': {
+            icon: '',
+            topics: {
+                primitve_vs_objects: {
+                    title: 'Stack vs Heap',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/primitive_vs_objects.md'
+                },
+                string_pool: {
+                    title: 'String Pool',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/string_pool_internals.md'
+                },
+                access_modifiers: {
+                    title: 'Modificadores de Acesso',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/access_modifiers.md'
+                },
+                static_context_traps: {
+                    title: 'Contexto Estático',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/static_context_traps.md'
+                },
+                final_keyword_safety: {
+                    title: 'Segurança com Final',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/final_keyword_safety.md'
+                },
+                operator_precedence: {
+                    title: 'Precedência de Operadores',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/operator_precedence.md'
+                },
+                variable_shadowing: {
+                    title: 'Variable Shadowing',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/variable_shadowing.md'
+                },
+                initialization_blocks: {
+                    title: 'Blocos de Inicialização',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/initialization_blocks.md'
+                },
+                enumeration_advanced: {
+                    title: 'Enumerações Avançadas',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/enumeration_advanced.md'
+                },
+                nested_classes: {
+                    title: 'Classes Aninhadas',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/nested_classes.md'
+                },
+                var_type_inference: {
+                    title: 'Inferência com Var',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/var_type_inference.md'
+                },
+                switch_expressions: {
+                    title: 'Expressões Switch',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/switch_expressions.md'
+                },
+                text_blocks_multiline: {
+                    title: 'Blocos de Texto',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/text_blocks_multiline.md'
+                },
+                unicode_identifier_support: {
+                    title: 'Suporte Unicode',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/unicode_identifier_support.md'
+                },
+                sealed_interfaces_logic: {
+                    title: 'Interfaces Seladas',
+                    contentPath: 'content/advanced_fundamentals_and_syntax/sealed_interfaces_logic.md'
+                }
+            }
+        }
     },
 
     /* ====================== 404 PHRASES ====================== */
@@ -500,6 +565,29 @@ const SITE_DATA = {
         "404: A página sumiu, assim como o seu tempo livre desde que você começou a usar metadinha com alguém que te proíbe de jogar Minecraft.",
         "Erro 404: Não achamos a página, mas o servidor detectou que você usa 'Perfil Monitorado' na bio. O roteador sentiu uma pontada de pena da sua castração digital.",
         "Erro 404: Procuramos a página e só achamos aquelas fotos de 'mão dada no volante' que você posta pra fingir que é Giga Chad. O servidor sabe que o carro é financiado e a relação também."
+    ],
+
+    /* ====================== STREAM PARTNERS ====================== */
+    partners: [
+        {
+            name: 'MestreJinBruno',
+            tag: 'Gameplay & Resenha',
+            img: 'images/streamers/mestrejinbruno.png',
+            links: {
+                twitch: 'https://www.twitch.tv/mestrejinbruno',
+                youtube: 'https://www.youtube.com/@mestrejinbruno',
+                kick: 'https://kick.com/mestrejinbruno'
+            }
+        },
+        {
+            name: 'Duddao_Joga',
+            tag: 'Gameplay & Resenha',
+            img: 'images/streamers/duddao.png',
+            links: {
+                twitch: 'https://www.twitch.tv/duddao_joga',
+                kick: 'https://kick.com/duddao-joga'
+            }
+        }
     ]
 };
 

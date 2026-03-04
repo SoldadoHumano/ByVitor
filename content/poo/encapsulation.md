@@ -1,18 +1,16 @@
 O **Encapsulamento** é um dos pilares fundamentais da POO. Ele serve para proteger os dados de uma classe contra acessos indevidos ou modificações acidentais, garantindo que o objeto tenha controle total sobre seu próprio estado.
 
-
-
-## 1. O Conceito de "Caixa Preta"
+## O Conceito de "Caixa Preta"
 Imagine um controle remoto: você sabe que apertar o botão de "Volume +" aumenta o som, mas você não precisa (e nem deve) mexer nos circuitos internos para isso. No código, o encapsulamento faz o mesmo: ele esconde a complexidade e protege a integridade dos dados.
 
-## 2. Modificadores de Acesso
+## Modificadores de Acesso
 Para aplicar o encapsulamento, utilizamos palavras-chave que definem quem pode ver o quê:
 
 * **`private`**: O atributo ou método só é visível dentro da própria classe. É o nível máximo de proteção.
 * **`public`**: O atributo ou método é visível por qualquer outra classe.
 * **`protected`**: Relacionado à herança (veremos mais adiante).
 
-## 3. Métodos Getters e Setters
+## Métodos Getters e Setters
 Como os atributos costumam ser `private`, usamos métodos públicos para interagir com eles de forma controlada:
 
 * **Getters (Obter):** Métodos que retornam o valor de um atributo. Ex: `getSaldo()`.

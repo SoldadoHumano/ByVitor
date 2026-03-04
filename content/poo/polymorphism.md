@@ -2,7 +2,7 @@ O termo **Polimorfismo** vem do grego e significa "muitas formas". Na programaç
 
 
 
-## 1. O que é Polimorfismo?
+## O que é Polimorfismo?
 O polimorfismo acontece quando uma subclasse altera o comportamento de um método que ela herdou da classe pai. Isso é chamado de **Sobrescrita de Método** (`@Override`).
 
 Imagine uma classe `Animal` com o método `fazerSom()`. 
@@ -11,10 +11,10 @@ Imagine uma classe `Animal` com o método `fazerSom()`.
 
 Embora ambos sejam chamados pelo mesmo método (`fazerSom`), o resultado é diferente.
 
-## 2. A Anotação `@Override`
+## A Anotação `@Override`
 Em Java, usamos a anotação `@Override` antes do método na classe filha. Isso informa ao compilador (e a outros desenvolvedores) que você está intencionalmente substituindo a lógica original do pai. Isso aumenta a segurança, pois se você errar o nome do método, o Java te avisará.
 
-## 3. Tipos de Polimorfismo
+## Tipos de Polimorfismo
 Existem duas formas principais de aplicar esse conceito:
 
 1.  **Sobrescrita (Override):** Mesma assinatura de método em classes diferentes (Pai e Filho). Acontece em tempo de execução.

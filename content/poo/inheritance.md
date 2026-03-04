@@ -2,16 +2,16 @@ A **Herança** é um dos pilares mais poderosos da POO. Ela permite que uma clas
 
 
 
-## 1. O conceito de "É um"
+## O conceito de "É um"
 A regra de ouro da herança é o relacionamento **"é um"**. Se você pode dizer que "B é um A", então B pode herdar de A.
 * Um **Carro** é um **Veículo**.
 * Um **Desenvolvedor** é um **Funcionário**.
 * Um **Cachorro** é um **Animal**.
 
-## 2. A palavra-chave `extends`
+## A palavra-chave `extends`
 No Java, utilizamos a palavra `extends` para indicar que uma classe está herdando de outra. Ao fazer isso, a subclasse ganha acesso imediato a tudo que é público ou protegido na superclasse.
 
-## 3. A palavra-chave `super`
+## A palavra-chave `super`
 O `super` é utilizado para nos referirmos diretamente à classe pai. Ele é muito comum em dois cenários:
 1.  **No Construtor:** Para chamar o construtor da classe pai e garantir que os dados básicos sejam inicializados.
 2.  **Nos Métodos:** Para executar a lógica original do pai antes (ou depois) de adicionar uma lógica nova na classe filha.

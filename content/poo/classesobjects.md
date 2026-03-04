@@ -1,19 +1,19 @@
 A **Programação Orientada a Objetos (POO)** é o paradigma que define o Java. Nela, tentamos aproximar o código do mundo real, agrupando dados e comportamentos em unidades chamadas **Objetos**. Para criar esses objetos, precisamos primeiro de um "projeto" ou "planta baixa": a **Classe**.
 
-## 1. O que é uma Classe?
+## O que é uma Classe?
 Uma classe é um modelo (template) que define as características e as ações que um objeto terá. Imagine uma classe chamada `Carro`: ela não é um carro real que você pode dirigir, mas sim o documento que diz que todo carro deve ter uma cor, um modelo e a capacidade de acelerar.
 
 * **Atributos:** São as características (dados) da classe (ex: `cor`, `marca`, `velocidade`).
 * **Métodos:** São as ações (comportamentos) que a classe pode executar (ex: `acelerar()`, `frear()`).
 
-## 2. O que é um Objeto?
+## O que é um Objeto?
 O objeto é a **instância** física da classe. Se a classe é a planta de uma casa, o objeto é a casa construída na rua. Você pode criar vários objetos a partir de uma única classe, e cada um terá seus próprios valores para os atributos, ocupando seu próprio espaço na memória.
 
 **Exemplos de instâncias:**
 * **Objeto A:** Marca: "Toyota", Modelo: "Corolla", Cor: "Prata".
 * **Objeto B:** Marca: "Honda", Modelo: "Civic", Cor: "Preto".
 
-## 3. Instanciando Objetos com `new`
+## Instanciando Objetos com `new`
 Para criar um objeto em Java, utilizamos a palavra-chave `new`. Ela é responsável por alocar espaço na memória RAM para o seu novo objeto e retornar uma referência para ele.
 
 <div class="callout callout--tip">

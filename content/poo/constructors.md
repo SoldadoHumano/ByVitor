@@ -1,15 +1,15 @@
 Sempre que utilizamos a palavra-chave `new`, estamos invocando um **Construtor**. Ele é um método especial destinado a preparar o objeto logo no momento da sua criação, garantindo que ele comece com os dados necessários para funcionar corretamente.
 
-## 1. O que é um Construtor?
+## O que é um Construtor?
 O construtor tem o mesmo nome da classe e não possui um tipo de retorno (nem mesmo `void`). Sua principal função é inicializar os atributos do objeto com valores específicos.
 
 * **Execução Única:** Ele só roda uma vez, exatamente quando o objeto é instanciado.
 * **Nome Obrigatório:** Deve ser idêntico ao nome da classe (respeitando maiúsculas e minúsculas).
 
-## 2. O Construtor Padrão (Default)
+## O Construtor Padrão (Default)
 Se você não escrever nenhum construtor na sua classe, o Java cria automaticamente um "construtor invisível" sem parâmetros. No entanto, assim que você cria o seu próprio construtor, esse automático deixa de existir.
 
-## 3. Sobrecarga de Construtores
+## Sobrecarga de Construtores
 Você pode ter mais de um construtor na mesma classe (desde que recebam parâmetros diferentes). Isso permite criar objetos de formas variadas. Por exemplo, um jogador pode nascer com um nome padrão ou com um nome escolhido pelo usuário.
 
 <div class="callout callout--tip">

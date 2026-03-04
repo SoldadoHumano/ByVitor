@@ -1,14 +1,12 @@
 Até agora, vimos classes que podiam ser instanciadas como objetos reais. Mas na programação de alto nível, muitas vezes precisamos de classes que sirvam apenas como um "conceito" ou um "contrato", garantindo que todas as subclasses sigam um padrão rigoroso.
 
-
-
-## 1. Classes Abstratas
+## Classes Abstratas
 Uma classe abstrata é uma classe que não pode ser instanciada (você não pode dar um `new` nela). Ela serve exclusivamente como base para outras classes.
 
 * **Métodos Abstratos:** São métodos que não possuem corpo (lógica). Eles apenas dizem: "Quem herdar de mim, **obrigatoriamente** terá que implementar este método".
 * **Uso:** Ideal quando você tem uma ideia geral (ex: `Animal`), mas só faz sentido criar objetos específicos (ex: `Cachorro`, `Gato`).
 
-## 2. Interfaces
+## Interfaces
 Se uma classe abstrata é uma planta parcial, uma **Interface** é um contrato 100% abstrato. Ela define **o que** uma classe deve fazer, mas não **como** ela deve fazer.
 
 * **Múltiplas Implementações:** Diferente da herança (onde você só tem um pai), uma classe pode implementar várias interfaces ao mesmo tempo.

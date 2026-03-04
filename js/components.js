@@ -324,6 +324,37 @@
 
   /* ====================== COMMUNITY PAGE ====================== */
   window.initCommunityPage = function () {
+    const partnersContainer = document.getElementById('partners-container');
+    if (partnersContainer) {
+      const partners = SITE_DATA.partners;
+      partnersContainer.innerHTML = partners.map(p => {
+        const linksHTML = [];
+        if (p.links.twitch) linksHTML.push(`<a href="${p.links.twitch}" target="_blank" class="partner-link" title="Twitch"><i class="fa-brands fa-twitch"></i> <span>Twitch</span></a>`);
+        if (p.links.youtube) linksHTML.push(`<a href="${p.links.youtube}" target="_blank" class="partner-link" title="YouTube"><i class="fa-brands fa-youtube"></i> <span>YouTube</span></a>`);
+        if (p.links.kick) linksHTML.push(`<a href="${p.links.kick}" target="_blank" class="partner-link" title="Kick"><i class="fa-solid fa-k"></i> <span>Kick</span></a>`);
+
+        return `
+          <div class="partner-card reveal reveal--down">
+            <div class="partner-card__avatar">
+              <div class="partner-card__avatar-inner">
+                <img src="${p.img}" alt="${p.name}">
+              </div>
+            </div>
+            <div class="partner-card__name">${p.name}</div>
+            <div class="partner-card__tag">${p.tag}</div>
+            <div class="partner-card__links">
+              ${linksHTML.join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Observe new reveals for the dynamic cards
+      if (window.observeNewReveals) {
+        window.observeNewReveals(partnersContainer);
+      }
+    }
+
     // Community page is mostly static HTML — just add dynamic behavior
     const joinBtns = document.querySelectorAll('.community-join-btn');
     joinBtns.forEach(btn => {

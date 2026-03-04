@@ -2,20 +2,20 @@ Na Programação Orientada a Objetos, dizemos que um objeto é definido por seu 
 
 
 
-## 1. Atributos (O Estado)
+## Atributos (O Estado)
 Os atributos são as variáveis declaradas dentro de uma classe. Eles representam as características ou propriedades de um objeto. O conjunto de valores que esses atributos possuem em um determinado momento é chamado de **Estado do Objeto**.
 
 * **Persistência:** Enquanto o objeto existir na memória, seus atributos manterão os valores atribuídos a eles.
 * **Escopo:** Podem ser acessados por qualquer método dentro da mesma classe.
 
-## 2. Métodos (O Comportamento)
+## Métodos (O Comportamento)
 Os métodos são blocos de código que realizam ações ou cálculos. Eles definem o que os objetos daquela classe podem fazer. 
 
 * **Interação:** Métodos geralmente manipulam os atributos da própria classe para alterar o estado do objeto.
 * **Parâmetros:** Podem receber dados externos para realizar suas tarefas.
 * **Retorno:** Podem devolver um resultado para quem o chamou (usando a palavra-chave `return`).
 
-## 3. A Relação entre Estado e Comportamento
+## A Relação entre Estado e Comportamento
 O comportamento (método) muitas vezes depende do estado (atributo). Por exemplo, um método `abrirPorta()` só deve funcionar se o atributo `estaTrancada` for `false`.
 
 <div class="callout callout--tip">
