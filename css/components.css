@@ -1779,6 +1779,13 @@ main {
     margin: 0 auto;
 }
 
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+    justify-content: center;
+}
+
 .partner-card {
     background: rgba(var(--surface-rgb), 0.4);
     backdrop-filter: blur(12px);
@@ -1786,10 +1793,9 @@ main {
     border: 1px solid rgba(var(--white-rgb), 0.05);
     border-radius: var(--radius-2xl);
     padding: var(--space-2xl);
-    width: 280px;
+    width: 320px;
     text-align: center;
     transition: all var(--duration-normal) var(--ease-spring);
-    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1819,7 +1825,6 @@ main {
     width: 100px;
     height: 100px;
     margin-bottom: var(--space-xl);
-    border: 3px solid rgba(var(--white-rgb), 0.1);
     position: relative;
     transition: transform var(--duration-normal) var(--ease-spring);
 }
@@ -1839,14 +1844,12 @@ main {
     transition: border-color var(--duration-normal) var(--ease-spring);
 }
 
-/* Imagem preenchendo perfeitamente o círculo */
 .partner-card__avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Glow ring externo (não será mais cortado) */
 .partner-card__avatar::after {
     content: '';
     position: absolute;
@@ -1858,7 +1861,6 @@ main {
     transition: all var(--duration-normal) var(--ease-spring);
 }
 
-/* Hover */
 .partner-card:hover .partner-card__avatar {
     transform: scale(1.1);
 }
@@ -1873,26 +1875,11 @@ main {
     animation: pulseGlow 2s infinite;
 }
 
-.partner-card__status {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background: #555;
-    padding: 4px 8px;
-    border-radius: var(--radius-sm);
-    font-size: 9px;
-    font-weight: var(--fw-bold);
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
 .partner-card__name {
     font-size: var(--fs-lg);
     font-weight: var(--fw-bold);
     color: var(--heading);
     margin-bottom: var(--space-xs);
-    position: relative;
 }
 
 .partner-card__tag {
@@ -1903,37 +1890,72 @@ main {
     opacity: 0.8;
 }
 
-.partner-card__btn {
+.partner-card__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
     width: 100%;
-    padding: 12px;
+}
+
+.partner-link {
+    width: 100%;
+    height: 44px;
     border-radius: var(--radius-lg);
     background: rgba(var(--white-rgb), 0.05);
-    color: var(--text);
+    color: var(--text-muted);
     font-size: var(--fs-sm);
-    font-weight: var(--fw-semibold);
     border: 1px solid rgba(var(--white-rgb), 0.1);
-    transition: all var(--duration-fast);
+    transition: all 0.3s var(--ease-out);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-sm);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
 
-.partner-card:hover .partner-card__btn {
-    background: var(--accent);
+.partner-link span {
+    font-weight: var(--fw-semibold);
+}
+
+.partner-link:hover {
     color: #fff;
-    border-color: var(--accent);
-    box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.3);
+    transform: translateY(-4px);
+    border-color: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Twitch Hover */
+.partner-link[title="Twitch"]:hover {
+    background: #9146FF;
+    box-shadow: 0 8px 25px rgba(145, 70, 255, 0.4);
+}
+
+/* YouTube Hover */
+.partner-link[title="YouTube"]:hover {
+    background: #FF0000;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+}
+
+/* Kick Hover */
+.partner-link[title="Kick"]:hover {
+    background: #53FC18;
+    color: #000;
+    box-shadow: 0 8px 25px rgba(83, 252, 24, 0.4);
+}
+
+
+@media (max-width: 1024px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
     .partners-grid {
+        grid-template-columns: 1fr;
         gap: var(--space-xl);
-    }
-
-    .partner-card {
-        width: 100%;
-        max-width: 320px;
     }
 }
 

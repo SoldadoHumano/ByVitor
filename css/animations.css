@@ -348,6 +348,15 @@
     transform: translateY(0);
 }
 
+.reveal--down {
+    transform: translateY(-35px);
+}
+
+.reveal--down.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Stagger children with smoother offsets */
 .reveal--stagger>* {
     opacity: 0;
