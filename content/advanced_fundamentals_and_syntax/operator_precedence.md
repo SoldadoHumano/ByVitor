@@ -82,7 +82,7 @@ double result = 10 + (5 * 2);</code></pre>
 </div>
 
 <div class="callout callout--tip">
-    <div class="callout__title">💡 Detalhe de Performance</div>
+    <div class="callout__title">💡 Dica de Performance</div>
     <div class="callout__text">
         Operadores de deslocamento de bits (<code><<</code>, <code>>></code>) são extremamente rápidos. Multiplicar por 2 usando <code>x << 1</code> é, em nível de hardware, mais simples que <code>x * 2</code>, embora o compilador moderno já faça essas otimizações para você automaticamente.
     </div>
