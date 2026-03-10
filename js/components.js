@@ -135,17 +135,32 @@
   /* ====================== LEARN SIDEBAR ====================== */
   window.initLearnPage = function () {
     const sidebar = document.getElementById('learn-sidebar');
+    const sidebarNav = document.getElementById('learn-sidebar-nav');
     const content = document.getElementById('learn-content');
-    if (!sidebar || !content) return;
+    const closeBtn = document.getElementById('sidebar-close-btn');
+    const fab = document.getElementById('learn-fab');
+    const overlay = document.getElementById('learn-sidebar-overlay');
+    const contentWrapper = document.getElementById('learn-content-wrapper');
+    if (!sidebar || !sidebarNav || !content) return;
 
-    // --- MARKED CONFIGURATION (The "Secret Sauce") ---
-    // This custom renderer ensures your markdown code blocks use your CSS classes
+    // --- State & Initial State ---
+    const openCats = new Set(); // tracks which categories are open by name
+    let sidebarVisible = true;
+
+    // Mobile starts hidden, PC starts visible
+    if (window.innerWidth <= 768) {
+      sidebarVisible = false;
+      sidebar.classList.add('hidden');
+    } else {
+      sidebar.classList.remove('hidden');
+    }
+
+    // --- MARKED CONFIGURATION ---
     const renderer = new marked.Renderer();
     renderer.code = function (codeContent, language) {
       const code = typeof codeContent === 'object' ? codeContent.text : codeContent;
       const langClass = language ? `language-${language}` : '';
       const langLabel = language || 'Code';
-
       return `
             <div class="code-block">
                 <div class="code-block__header">
@@ -164,13 +179,15 @@
     // --- BUILD SIDEBAR ---
     let sidebarHTML = '';
     Object.entries(learn).forEach(([cat, data], catIdx) => {
+      const isOpen = catIdx === 0;
+      if (isOpen) openCats.add(cat);
       sidebarHTML += `
             <div class="learn-sidebar__cat">
-                <button class="learn-sidebar__cat-btn${catIdx === 0 ? ' open' : ''}" data-cat="${cat}">
+                <button class="learn-sidebar__cat-btn${isOpen ? ' open' : ''}" data-cat="${cat}">
                     <span>${data.icon} ${cat}</span>
                     <span class="learn-sidebar__chevron">▶</span>
                 </button>
-                <div class="learn-sidebar__topics${catIdx === 0 ? ' open' : ''}">`;
+                <div class="learn-sidebar__topics${isOpen ? ' open' : ''}">`;
 
       Object.entries(data.topics).forEach(([slug, topic]) => {
         allTopics.push({ slug, topic, cat });
@@ -180,28 +197,124 @@
       sidebarHTML += `</div></div>`;
     });
 
-    sidebar.innerHTML = sidebarHTML;
+    sidebarNav.innerHTML = sidebarHTML;
 
     // --- CATEGORY TOGGLE ---
-    sidebar.querySelectorAll('.learn-sidebar__cat-btn').forEach(btn => {
+    sidebarNav.querySelectorAll('.learn-sidebar__cat-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        btn.classList.toggle('open');
+        const cat = btn.dataset.cat;
+        const isNowOpen = btn.classList.toggle('open');
         btn.nextElementSibling.classList.toggle('open');
+        if (isNowOpen) {
+          openCats.add(cat);
+        } else {
+          openCats.delete(cat);
+        }
       });
     });
 
-    // --- LOAD TOPIC FUNCTION (ASYNCHRONOUS) ---
+    // =========================================================
+    //  SIDEBAR CLOSE — Animated: close cats first, then slide out
+    // =========================================================
+    function closeSidebar() {
+      if (!sidebarVisible) return;
+      sidebarVisible = false;
+
+      // Step 1: Close all open category sections with stagger
+      const openBtns = sidebarNav.querySelectorAll('.learn-sidebar__cat-btn.open');
+      const totalCats = openBtns.length;
+      const staggerDelay = 60; // ms per cat
+      const catAnimTime = totalCats * staggerDelay + 200; // total time for cats to close
+
+      openBtns.forEach((btn, i) => {
+        setTimeout(() => {
+          btn.classList.remove('open');
+          btn.nextElementSibling.classList.remove('open');
+        }, i * staggerDelay);
+      });
+
+      // Step 2: After cats close, slide sidebar out
+      setTimeout(() => {
+        sidebar.classList.add('hidden');
+        // Mobile: close overlay
+        if (overlay) overlay.classList.remove('visible');
+        document.body.style.overflow = '';
+      }, catAnimTime);
+    }
+
+    // =========================================================
+    //  SIDEBAR OPEN — Animated: slide in, then restore cats
+    // =========================================================
+    function openSidebar() {
+      if (sidebarVisible) return;
+      sidebarVisible = true;
+
+      // Mobile: show overlay
+      if (window.innerWidth <= 768 && overlay) {
+        overlay.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Step 1: Slide sidebar in
+      sidebar.classList.remove('hidden');
+
+      // Step 2: After sidebar slides in, restore previously opened cats
+      setTimeout(() => {
+        sidebarNav.querySelectorAll('.learn-sidebar__cat-btn').forEach(btn => {
+          const cat = btn.dataset.cat;
+          if (openCats.has(cat)) {
+            btn.classList.add('open');
+            btn.nextElementSibling.classList.add('open');
+          }
+        });
+      }, 250); // wait for slide-in animation
+    }
+
+    // --- Close button (inside sidebar header) ---
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeSidebar);
+    }
+
+    // --- FAB: opens sidebar ---
+    if (fab) {
+      fab.addEventListener('click', openSidebar);
+    }
+
+    // --- Overlay click: close ---
+    if (overlay) {
+      overlay.addEventListener('click', closeSidebar);
+    }
+
+    // --- LOAD TOPIC ---
     async function loadTopic(slug) {
       let found = null, idx = -1;
       allTopics.forEach((t, i) => { if (t.slug === slug) { found = t; idx = i; } });
       if (!found) return;
 
-      // Update active state in sidebar
-      sidebar.querySelectorAll('.learn-sidebar__topic').forEach(t => t.classList.remove('active'));
-      const activeItem = sidebar.querySelector(`[data-slug="${slug}"]`);
+      // Update active state
+      sidebarNav.querySelectorAll('.learn-sidebar__topic').forEach(t => t.classList.remove('active'));
+      const activeItem = sidebarNav.querySelector(`[data-slug="${slug}"]`);
       if (activeItem) activeItem.classList.add('active');
 
-      // Build navigation HTML
+      // Ensure parent category is open
+      const parentCat = activeItem?.closest('.learn-sidebar__cat');
+      if (parentCat) {
+        const catBtn = parentCat.querySelector('.learn-sidebar__cat-btn');
+        const catTopics = parentCat.querySelector('.learn-sidebar__topics');
+        const cat = catBtn.dataset.cat;
+        if (!catBtn.classList.contains('open')) {
+          catBtn.classList.add('open');
+          catTopics.classList.add('open');
+          openCats.add(cat);
+        }
+      }
+
+      // Mobile: close sidebar after selecting a topic
+      if (window.innerWidth <= 768 && sidebarVisible) {
+        closeSidebar();
+      }
+
+      // Navigation
       const prev = idx > 0 ? allTopics[idx - 1] : null;
       const next = idx < allTopics.length - 1 ? allTopics[idx + 1] : null;
 
@@ -210,17 +323,15 @@
       navHTML += next ? `<a class="learn-nav__btn" data-slug="${next.slug}"><div class="learn-nav__label">Próximo →</div><div class="learn-nav__title">${next.topic.title}</div></a>` : '<div></div>';
       navHTML += '</div>';
 
-      // Content Animation: Fade Out
+      // Fade out
       content.style.opacity = '0';
-      content.style.transform = 'translateY(10px)';
+      content.style.transform = 'translateY(15px)';
+      content.style.filter = 'blur(4px)';
 
       try {
-        // Fetch the Markdown file
         const response = await fetch(found.topic.contentPath);
         if (!response.ok) throw new Error('File not found');
         const markdownText = await response.text();
-
-        // Convert Markdown to HTML
         const htmlContent = marked.parse(markdownText);
 
         setTimeout(() => {
@@ -230,34 +341,36 @@
                     ${navHTML}
                 `;
 
-          // --- HIGHLIGHT CODE ---
-          // Apply syntax coloring to the newly injected code blocks
           content.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
           });
 
-          // Content Animation: Fade In
-          content.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+          // Reset opacity/transform for content container but let typewriter handle internal elements
+          content.style.transition = 'opacity 0.6s var(--ease-smooth), transform 0.6s var(--ease-smooth)';
           content.style.opacity = '1';
           content.style.transform = 'translateY(0)';
+          content.style.filter = 'blur(0)';
 
-          // Bind navigation button clicks
+          // --- APPLY TYPEWRITER ---
+          applyTypewriterEffect(content);
+
           content.querySelectorAll('.learn-nav__btn').forEach(btn => {
             btn.addEventListener('click', () => loadTopic(btn.dataset.slug));
           });
 
           window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 200);
+        }, 250);
 
       } catch (error) {
         console.error('Error loading markdown:', error);
         content.innerHTML = `<h1>Erro</h1><p>Não foi possível carregar o arquivo .md em: ${found.topic.contentPath}</p>`;
         content.style.opacity = '1';
+        content.style.filter = 'blur(0)';
       }
     }
 
-    // --- TOPIC CLICK EVENTS ---
-    sidebar.querySelectorAll('.learn-sidebar__topic').forEach(t => {
+    // --- TOPIC CLICK ---
+    sidebarNav.querySelectorAll('.learn-sidebar__topic').forEach(t => {
       t.addEventListener('click', (e) => {
         e.preventDefault();
         loadTopic(t.dataset.slug);
@@ -479,16 +592,140 @@
     return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
   }
 
-  /* ====================== BACKGROUND ====================== */
-  function renderBackground() {
-    if (!document.querySelector('.bg-grid-animated')) {
-      document.body.insertAdjacentHTML('afterbegin', '<div class="bg-grid-animated"></div>');
+  // --- SEQUENTIAL TYPEWRITER EFFECT ---
+  let typingQueue = [];
+  let isCurrentlyTyping = false;
+
+  function applyTypewriterEffect(container) {
+    const elements = Array.from(container.querySelectorAll('h1, h2, h3, h4, p, li, blockquote'));
+
+    // Config
+    const observerOptions = {
+      root: null,
+      threshold: 0.05,
+      rootMargin: '0px 0px -20% 0px' // only triggers if 20% from the bottom to allow scrolling space
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          if (!el.classList.contains('typed-ready') && !el.classList.contains('typed-done')) {
+            el.classList.add('typed-ready');
+            checkQueue();
+          }
+          observer.unobserve(el);
+        }
+      });
+    }, observerOptions);
+
+    elements.forEach(el => {
+      if (el.closest('.code-block') || el.closest('.learn-nav')) {
+        el.style.opacity = '1';
+        return;
+      }
+
+      const originalHTML = el.innerHTML;
+      el.setAttribute('data-original-html', originalHTML);
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(5px)';
+      el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      observer.observe(el);
+    });
+
+    async function checkQueue() {
+      if (isCurrentlyTyping) return;
+
+      // Get all ready elements that aren't done, sorted by DOM position
+      const readyElements = Array.from(document.querySelectorAll('.typed-ready:not(.typed-done)'))
+        .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+
+      if (readyElements.length === 0) return;
+
+      isCurrentlyTyping = true;
+      const el = readyElements[0];
+      await startTyping(el);
+      isCurrentlyTyping = false;
+
+      // Continue to next one in queue
+      checkQueue();
+    }
+
+    function startTyping(el) {
+      return new Promise(async (resolve) => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+        const html = el.getAttribute('data-original-html');
+        el.innerHTML = '';
+
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html;
+        const nodes = Array.from(tempDiv.childNodes);
+
+        const typeNode = (target, node) => {
+          return new Promise(resolveNode => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              const text = node.textContent;
+              let charIndex = 0;
+              const charsPerFrame = 10;
+
+              const step = () => {
+                const end = Math.min(charIndex + charsPerFrame, text.length);
+                const chunk = text.substring(charIndex, end);
+                target.appendChild(document.createTextNode(chunk));
+                charIndex = end;
+
+                if (charIndex < text.length) {
+                  requestAnimationFrame(step);
+                } else {
+                  resolveNode();
+                }
+              };
+              requestAnimationFrame(step);
+            } else {
+              const newNode = node.cloneNode(false);
+              target.appendChild(newNode);
+              const childNodes = Array.from(node.childNodes);
+
+              async function processChildren() {
+                for (const child of childNodes) {
+                  await typeNode(newNode, child);
+                }
+                resolveNode();
+              }
+              processChildren();
+            }
+          });
+        };
+
+        for (const node of nodes) {
+          await typeNode(el, node);
+        }
+
+        el.classList.add('typed-done');
+        el.classList.remove('typed-ready');
+        resolve();
+      });
     }
   }
 
+  // --- External Code Copy ---
+  window.copyCode = function (btn) {
+    const pre = btn.closest('.code-block').querySelector('pre');
+    const code = pre.innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      const originalText = btn.innerText;
+      btn.innerText = 'Copiado!';
+      btn.classList.add('success');
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.classList.remove('success');
+      }, 2000);
+    });
+  };
+
   /* ====================== PAGE INIT ====================== */
   function init() {
-    renderBackground();
     renderNavbar();
     renderFooter();
   }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ByVitor</title>
     <meta name="description"
         content="Aprenda programação de verdade: Fundamentos, arquitetura, performance e engenharia de software sem segredos.">
@@ -29,35 +29,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="css/backgroundanimation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body class="page-transition">
+<body class="page-transition learn-page">
     <main>
-        <!-- ===== BANNER ===== -->
-        <section style="padding-top: var(--space-xl);">
-            <div class="container">
-                <div class="learn-banner">
-                    "Isso não é um curso. É como eu explicaria programação pra alguém que quer entender de verdade."
+        <!-- ===== LEARN PAGE ===== -->
+        <section class="learn-page-section">
+            <!-- Sidebar Overlay (mobile) -->
+            <div class="learn-sidebar-overlay" id="learn-sidebar-overlay"></div>
+
+            <!-- Collapsible Sidebar -->
+            <aside class="learn-sidebar" id="learn-sidebar">
+                <div class="learn-sidebar__header">
+                    <span class="learn-sidebar__header-title">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span class="learn-sidebar__header-text">Conteúdo</span>
+                    </span>
+                    <button class="learn-sidebar__close-btn" id="sidebar-close-btn" aria-label="Fechar menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="learn-sidebar__nav" id="learn-sidebar-nav">
+                    <!-- Rendered by JS -->
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <div class="learn-content-wrapper" id="learn-content-wrapper">
+                <div class="learn-content" id="learn-content">
+                    <!-- Rendered by JS -->
                 </div>
             </div>
-        </section>
 
-        <!-- ===== TWO-COLUMN LAYOUT ===== -->
-        <section>
-            <div class="container">
-                <div class="learn-layout">
-                    <!-- Sidebar -->
-                    <aside class="learn-sidebar" id="learn-sidebar">
-                        <!-- Rendered by JS -->
-                    </aside>
-
-                    <!-- Content -->
-                    <div class="learn-content" id="learn-content">
-                        <!-- Rendered by JS -->
-                    </div>
-                </div>
-            </div>
+            <!-- FAB to open sidebar (visible on all sizes when sidebar is closed) -->
+            <button class="learn-fab" id="learn-fab" aria-label="Abrir menu de tópicos">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </section>
 
     </main>
@@ -66,6 +75,7 @@
     <script src="js/wave.js"></script>
     <script src="js/components.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/backgroundanimation.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             initLearnPage();

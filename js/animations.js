@@ -66,50 +66,6 @@
         }, { passive: true });
     }
 
-    /* ====================== MOUSE GLOW (Hero) ====================== */
-    function initMouseGlow() {
-        const hero = document.querySelector('.hero');
-        if (!hero) return;
-
-        const glow = document.createElement('div');
-        glow.style.cssText = `
-      position: absolute; width: 500px; height: 500px; border-radius: 50%;
-      pointer-events: none; z-index: 0;
-      background: radial-gradient(circle, rgba(108,99,255,0.06), transparent 70%);
-      transform: translate(-50%, -50%);
-      transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-      opacity: 0;
-    `;
-        hero.style.position = 'relative';
-        hero.appendChild(glow);
-
-        let glowX = 0, glowY = 0, targetGlowX = 0, targetGlowY = 0;
-        let glowRafId = null;
-
-        function animateGlow() {
-            glowX += (targetGlowX - glowX) * 0.1;
-            glowY += (targetGlowY - glowY) * 0.1;
-            glow.style.left = glowX + 'px';
-            glow.style.top = glowY + 'px';
-
-            if (Math.abs(targetGlowX - glowX) > 0.5 || Math.abs(targetGlowY - glowY) > 0.5) {
-                glowRafId = requestAnimationFrame(animateGlow);
-            } else {
-                glowRafId = null;
-            }
-        }
-
-        hero.addEventListener('mousemove', (e) => {
-            const rect = hero.getBoundingClientRect();
-            targetGlowX = e.clientX - rect.left;
-            targetGlowY = e.clientY - rect.top;
-            glow.style.opacity = '1';
-            if (!glowRafId) {
-                glowRafId = requestAnimationFrame(animateGlow);
-            }
-        });
-        hero.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
-    }
 
     /* ====================== SMOOTH SCROLL (anchor links) ====================== */
     function initSmoothScroll() {
@@ -156,38 +112,6 @@
         });
     };
 
-    /* ====================== GLOBAL MOUSE GLOW ====================== */
-    function initGlobalGlow() {
-        const glow = document.createElement('div');
-        glow.classList.add('global-mouse-glow');
-        document.body.appendChild(glow);
-
-        let gx = 0, gy = 0, tgx = 0, tgy = 0;
-        let gRafId = null;
-
-        function animateGlobalGlow() {
-            gx += (tgx - gx) * 0.08;
-            gy += (tgy - gy) * 0.08;
-            glow.style.transform = `translate(${gx}px, ${gy}px)`;
-
-            if (Math.abs(tgx - gx) > 0.5 || Math.abs(tgy - gy) > 0.5) {
-                gRafId = requestAnimationFrame(animateGlobalGlow);
-            } else {
-                gRafId = null;
-            }
-        }
-
-        window.addEventListener('mousemove', (e) => {
-            tgx = e.clientX;
-            tgy = e.clientY;
-            glow.style.opacity = '1';
-            if (!gRafId) {
-                gRafId = requestAnimationFrame(animateGlobalGlow);
-            }
-        });
-
-        document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
-    }
 
     /* ====================== 3D TILT ON CARDS ====================== */
     function initTiltCards() {
@@ -222,10 +146,8 @@
     function init() {
         initScrollReveal();
         initParallax();
-        initMouseGlow();
         initSmoothScroll();
         initRipple();
-        initGlobalGlow();
         // initTiltCards();
         window.initFooterGlitter();
     }

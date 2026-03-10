@@ -531,35 +531,206 @@
     animation: gradientShift 5s ease infinite;
 }
 
-/* --- Background Particles --- */
-.bg-particles {
-    position: relative;
-    overflow: hidden;
+/* --- Enhanced Micro-Animations --- */
+
+/* Glow line underline */
+@keyframes glowLine {
+
+    0%,
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+
+    50% {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
-.bg-particles::before,
-.bg-particles::after {
+/* Slide reveal with scale */
+@keyframes slideReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Soft entrance */
+@keyframes softEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Enhanced page transition with blur */
+.page-transition {
+    animation: blurIn 0.7s var(--ease-smooth);
+}
+
+/* Reveal with blur variant - enhanced */
+.reveal--blur {
+    filter: blur(10px);
+    transform: translateY(15px);
+    transition: opacity 0.8s var(--ease-smooth),
+        filter 0.8s var(--ease-smooth),
+        transform 0.8s var(--ease-smooth);
+}
+
+.reveal--blur.revealed {
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Extended stagger for more children */
+.reveal--stagger.revealed>*:nth-child(11) {
+    transition-delay: 1000ms;
+}
+
+.reveal--stagger.revealed>*:nth-child(12) {
+    transition-delay: 1100ms;
+}
+
+/* Card hover glow ring */
+.hover-glow-ring {
+    position: relative;
+    transition: all 0.4s var(--ease-smooth);
+}
+
+.hover-glow-ring::after {
     content: '';
     position: absolute;
-    border-radius: 50%;
-    opacity: 0.07;
-    pointer-events: none;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.2), rgba(var(--accent-2-rgb), 0.1));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s var(--ease-smooth);
+    filter: blur(8px);
 }
 
-.bg-particles::before {
-    width: 400px;
-    height: 400px;
-    background: var(--accent);
-    top: -200px;
-    right: -100px;
-    animation: floatSlow 14s var(--ease-butter) infinite;
+.hover-glow-ring:hover::after {
+    opacity: 1;
 }
 
-.bg-particles::after {
-    width: 300px;
-    height: 300px;
-    background: var(--accent-2);
-    bottom: -150px;
-    left: -100px;
-    animation: floatSlow 12s var(--ease-butter) infinite reverse;
+/* Smooth scale hover */
+.hover-scale {
+    transition: transform 0.35s var(--ease-spring);
+}
+
+.hover-scale:hover {
+    transform: scale(1.03);
+}
+
+/* Enhanced shine effect */
+.hover-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(100deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.04) 45%,
+            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.04) 55%,
+            transparent 80%);
+    transition: left 0.7s var(--ease-smooth);
+}
+
+.hover-shine:hover::after {
+    left: 130%;
+}
+
+/* Subtle text shimmer for headings */
+@keyframes textShimmer {
+    0% {
+        background-position: -200% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+/* Smooth content swap animation */
+@keyframes contentSwap {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(6px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.anim-content-swap {
+    animation: contentSwap 0.5s var(--ease-smooth) both;
+}
+
+/* Pulsing dot for active sidebar item */
+@keyframes pulseDot {
+
+    0%,
+    100% {
+        box-shadow: 0 0 6px rgba(var(--accent-rgb), 0.5),
+            0 0 12px rgba(var(--accent-rgb), 0.2);
+        transform: translateY(-50%) scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.8),
+            0 0 20px rgba(var(--accent-rgb), 0.4);
+        transform: translateY(-50%) scale(1.2);
+    }
+}
+
+/* Title Underline Expansion (Left to Right) */
+@keyframes underlineExpandLeftRight {
+    from {
+        width: 0;
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+/* H1 underline expand */
+@keyframes underlineExpand {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 60px;
+        opacity: 1;
+    }
 }

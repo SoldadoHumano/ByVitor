@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByVitor</title>
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+
+    <link rel="icon" type="image/png" href="images/logos/logo.png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/backgroundanimation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .void-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-xl);
+            background: radial-gradient(circle at center, rgba(var(--accent-rgb), 0.08) 0%, transparent 75%);
+            overflow: hidden;
+        }
+
+        .void-content {
+            max-width: 500px;
+            width: 100%;
+            padding: var(--space-2xl);
+            background: rgba(var(--bg-rgb), 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(var(--accent-rgb), 0.2);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+            /* Card parado conforme solicitado */
+            transform: translateY(0);
+        }
+
+        .void-title {
+            font-size: var(--fs-2xl);
+            margin-bottom: var(--space-xs);
+            color: var(--heading);
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-full);
+            margin: var(--space-xl) 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            box-shadow: 0 0 15px var(--accent);
+            border-radius: var(--radius-full);
+            /* Transição suave para o salto de 1% */
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .void-percent {
+            font-family: var(--font-mono);
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-lg);
+            color: var(--text);
+            letter-spacing: 2px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .void-status {
+            font-family: var(--font-mono);
+            font-size: var(--fs-xs);
+            color: var(--accent);
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 var(--space-md);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .status-changing {
+            opacity: 0;
+            transform: translateY(5px);
+        }
+
+        .void-actions {
+            margin-top: var(--space-xl);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .void-actions:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="void-page">
+            <div class="void-content reveal">
+                <h1 class="void-title">Vazio Existencial</h1>
+                <p class="text-muted" style="font-size: 0.9rem;">O sentido da vida está sendo compilado...</p>
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+
+                <div class="void-percent" id="percent">0%</div>
+
+                <div class="void-status" id="status-text">
+                    Iniciando desfragmentação da alma...
+                </div>
+
+                <div class="void-actions">
+                    <a href="index.html" class="btn btn--outline btn--sm">
+                        <i class="fas fa-arrow-left"></i> Fugir para a Realidade
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/animations.js"></script>
+    <script src="js/backgroundanimation.js"></script>
+    <script>
+        /**
+         * Infinite and randomized loading logic.
+         * Every 1% takes between 30 seconds and 5 minutes.
+         */
+        const progressBar = document.getElementById('progress-bar');
+        const percentText = document.getElementById('percent');
+        const statusText = document.getElementById('status-text');
+
+        const phrases = [
+            "Iniciando desfragmentação da alma...",
+            "Limpando o histórico da sua dignidade...",
+            "Alinhando os chakras do servidor...",
+            "Procurando o café do programador...",
+            "Tentando entender seus commits sem sentido...",
+            "Instalando atualização: 'Bom Senso 2.0' (Failed)",
+            "Downloading more RAM... 😂",
+            "Recuperando expectativas frustradas...",
+            "Otimizando o vácuo absoluto...",
+            "Sincronizando com o nada...",
+            "Compiling the universe... please wait.",
+            "Removendo vestígios de produtividade...",
+            "Verificando integridade do ego...",
+            "A página está em retiro espiritual em Santa Catarina.",
+            "Resetando o loop existencial...",
+            "Analisando por que você ainda está aqui...",
+            "O servidor está tirando um cochilo, tente não respirar alto."
+        ];
+
+        let progress = 0;
+        let phraseIndex = 0;
+
+        function updatePhrase() {
+            statusText.classList.add('status-changing');
+
+            setTimeout(() => {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                statusText.innerText = phrases[phraseIndex];
+                statusText.classList.remove('status-changing');
+            }, 400);
+        }
+
+        function processLoading() {
+            // Increment progress by 1%
+            progress += 1;
+
+            if (progress > 100) {
+                progress = 0;
+                updatePhrase();
+            }
+
+            // Update DOM
+            progressBar.style.width = `${progress}%`;
+            percentText.innerText = `${progress}%`;
+
+            // Random delay for the NEXT 1%:
+            // 30,000ms (30s) to 300,000ms (5min)
+            const min = 30000;
+            const max = 300000;
+            const nextTick = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            // Hidden log for developer eyes only
+            console.log(`%c[Debug] Next 1% in ${Math.round(nextTick / 1000)}s`, "color: #00ff00; font-weight: bold;");
+
+            setTimeout(processLoading, nextTick);
+        }
+
+        // Start the psychological warfare
+        // First tick is faster just to give a "false hope"
+        setTimeout(processLoading, 2000);
+
+    </script>
+</body>
+
+</html>

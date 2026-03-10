@@ -31,13 +31,14 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/backgroundanimation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body class="page-transition">
     <main>
         <!-- ===== HERO ===== -->
-        <section class="hero bg-particles">
+        <section class="hero">
             <div class="hero__bg"></div>
             <div class="container">
                 <div class="hero__content">
@@ -62,9 +63,10 @@
         </section>
 
         <!-- ===== SPONSORS / TRUST ===== -->
-        <section class="section--sm">
+        <section class="section--sm" style="padding: 0;">
             <div class="section-divider"></div>
-            <div class="sponsors">
+            <div class="sponsors"
+                style="background: rgba(var(--bg-rgb), 0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: var(--space-2xl) 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
                 <div class="container text-center" style="margin-bottom: var(--space-lg);">
                     <p class="text-muted"
                         style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.1em;">Empresas e
@@ -161,7 +163,7 @@
         </section> -->
 
         <!-- ===== SOCIAL / CONNECT ===== -->
-        <section class="section bg-particles" id="contato">
+        <section class="section" id="contato">
             <div class="container">
                 <div class="text-center reveal" style="margin-bottom: var(--space-3xl);">
                     <div class="section-label" style="justify-content: center;">Conecte-se</div>
@@ -221,6 +223,7 @@
     <script src="js/wave.js"></script>
     <script src="js/components.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/backgroundanimation.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             initIndexPage();

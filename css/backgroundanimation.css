@@ -1,0 +1,22 @@
+/* Background Animation Canvas Styles */
+#glcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    /* Placed behind everything */
+    display: block;
+    pointer-events: none;
+    /* Allow clicks to pass through */
+    background-color: #050010;
+    /* Fallback dark background */
+}
+
+/* Dim the background on 'learn.html' for better readability */
+.learn-page #glcanvas {
+    opacity: 0.4 !important;
+}

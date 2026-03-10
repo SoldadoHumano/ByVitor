@@ -101,10 +101,6 @@
     --container-narrow: 900px;
     --sidebar-width: 300px;
 
-    /* Animated Grid */
-    --grid-size: 40px;
-    --grid-color: rgba(var(--accent-rgb), 0.07);
-    --grid-speed: 15s;
 }
 
 /* --- Reset --- */
@@ -162,16 +158,17 @@ main {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg);
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: linear-gradient(to bottom, var(--border), var(--surface-3));
     border-radius: var(--radius-full);
+    transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
+    background: linear-gradient(to bottom, var(--accent), var(--accent-dark));
 }
 
 /* --- Typography --- */
@@ -220,11 +217,12 @@ p {
 a {
     color: var(--accent);
     text-decoration: none;
-    transition: color var(--duration-fast) var(--ease-out);
+    transition: color 0.25s var(--ease-out), text-shadow 0.25s var(--ease-out);
 }
 
 a:hover {
     color: var(--accent-glow);
+    text-shadow: 0 0 12px rgba(var(--accent-rgb), 0.2);
 }
 
 strong {
@@ -292,41 +290,6 @@ button {
     position: relative;
 }
 
-/* --- Backgrounds --- */
-.bg-grid-animated {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -2;
-    pointer-events: none;
-}
-
-.bg-grid-animated::before {
-    content: '';
-    position: absolute;
-    inset: -100%;
-    width: 300%;
-    height: 300%;
-    background-image:
-        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-    background-size: var(--grid-size) var(--grid-size);
-    mask-image: radial-gradient(circle at center, black, transparent 80%);
-    -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-    animation: grid-move var(--grid-speed) linear infinite;
-}
-
-@keyframes grid-move {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(calc(var(--grid-size) * -1), calc(var(--grid-size) * -1));
-    }
-}
 
 .section--sm {
     padding: var(--space-3xl) 0;
