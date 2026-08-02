@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[69248,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js","/ByVitor/_next/static/chunks/1izei5wiqca2o.js","/ByVitor/_next/static/chunks/2lb831f2609f6.js","/ByVitor/_next/static/chunks/3oco9hyri5ben.js","/ByVitor/_next/static/chunks/0_s7658auhrny.js"],"default"]
-4:I[97367,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
-6:"$Sreact.suspense"
-:HL["/ByVitor/_next/static/chunks/1e0n14egb9bme.css","style"]
+2:I[69248,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js","/_next/static/chunks/1izei5wiqca2o.js","/_next/static/chunks/2lb831f2609f6.js","/_next/static/chunks/3oco9hyri5ben.js","/_next/static/chunks/0_s7658auhrny.js"],"default"]
+4:I[97367,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+:HL["/_next/static/chunks/1e0n14egb9bme.css","style"]
 3:Tb3c,Muitas pessoas associam a palavra "algoritmo" apenas a redes sociais ou cálculos complexos, mas o conceito é muito mais simples. Um algoritmo é, essencialmente, uma **sequência finita de passos bem definidos** para realizar uma tarefa ou resolver um problema.
 
 Se a programação é a escrita, o algoritmo é a história que está sendo contada.
@@ -61,6 +61,5 @@ Imagine o algoritmo para uma porta automática simples. Note como a lógica e a 
 //      d. Close the door safely
 // 3. Else:
 //      a. Keep the door locked and save energy</code></pre>
-</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],[["$","link","0",{"rel":"stylesheet","href":"/ByVitor/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}],["$","script","script-0",{"src":"/ByVitor/_next/static/chunks/2lb831f2609f6.js","async":true}],["$","script","script-1",{"src":"/ByVitor/_next/static/chunks/3oco9hyri5ben.js","async":true}],["$","script","script-2",{"src":"/ByVitor/_next/static/chunks/0_s7658auhrny.js","async":true}]],["$","$L4",null,{"children":"$L5"}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6EfzbX-zBicQ9worpVbvR"}
-5:["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]
-7:null
+</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}],["$","script","script-2",{"src":"/_next/static/chunks/0_s7658auhrny.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7t0IJ3xZa6yFJcFpa_QZ_"}
+6:null

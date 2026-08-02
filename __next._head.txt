@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[97367,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js"],"ViewportBoundary"]
-3:I[97367,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js"],"MetadataBoundary"]
+2:I[97367,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"ViewportBoundary"]
+3:I[97367,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"MetadataBoundary"]
 4:"$Sreact.suspense"
-5:I[27201,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js"],"IconMark"]
-0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"ByVitor"}],["$","meta","1",{"name":"description","content":"Portfólio de Vitor, Desenvolvedor Full-Stack."}],["$","link","2",{"rel":"icon","href":"/ByVitor/icon.svg?icon.3u_ll919msy7t.svg","sizes":"any","type":"image/svg+xml"}],["$","$L5","3",{}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6EfzbX-zBicQ9worpVbvR"}
+5:I[27201,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"IconMark"]
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"ByVitor"}],["$","meta","1",{"name":"description","content":"Portfólio de Vitor, Desenvolvedor Full-Stack."}],["$","link","2",{"rel":"icon","href":"/icon.svg?icon.3u_ll919msy7t.svg","sizes":"any","type":"image/svg+xml"}],["$","$L5","3",{}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7t0IJ3xZa6yFJcFpa_QZ_"}

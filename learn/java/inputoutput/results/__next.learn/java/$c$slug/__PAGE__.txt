@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[69248,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js","/ByVitor/_next/static/chunks/1izei5wiqca2o.js","/ByVitor/_next/static/chunks/2lb831f2609f6.js","/ByVitor/_next/static/chunks/3oco9hyri5ben.js","/ByVitor/_next/static/chunks/0_s7658auhrny.js"],"default"]
-5:I[97367,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
+2:I[69248,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js","/_next/static/chunks/1izei5wiqca2o.js","/_next/static/chunks/2lb831f2609f6.js","/_next/static/chunks/3oco9hyri5ben.js","/_next/static/chunks/0_s7658auhrny.js"],"default"]
+4:I[97367,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
 6:"$Sreact.suspense"
-:HL["/ByVitor/_next/static/chunks/1e0n14egb9bme.css","style"]
+:HL["/_next/static/chunks/1e0n14egb9bme.css","style"]
 3:Tb67,A exibição de resultados é o processo de enviar informações processadas pelo programa para um dispositivo de saída, geralmente a tela do computador. Em Java, utilizamos a classe `System` e o objeto `out` para realizar essa tarefa de forma simples e direta.
 
 ## 1. O Objeto `System.out`
@@ -59,6 +59,6 @@ System.out.println("Olá, " + usuario + ". Versão do sistema: " + versao);
 double preco = 19.90;
 // %f para decimais, %.2f para limitar a 2 casas
 System.out.printf("O valor do item é: R$ %.2f \n", preco);</code></pre>
-</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],[["$","link","0",{"rel":"stylesheet","href":"/ByVitor/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}],["$","script","script-0",{"src":"/ByVitor/_next/static/chunks/2lb831f2609f6.js","async":true}],["$","script","script-1",{"src":"/ByVitor/_next/static/chunks/3oco9hyri5ben.js","async":true}],["$","script","script-2",{"src":"/ByVitor/_next/static/chunks/0_s7658auhrny.js","async":true}]],"$L4"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6EfzbX-zBicQ9worpVbvR"}
-4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}],["$","script","script-2",{"src":"/_next/static/chunks/0_s7658auhrny.js","async":true}]],["$","$L4",null,{"children":"$L5"}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7t0IJ3xZa6yFJcFpa_QZ_"}
+5:["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]
 7:null
