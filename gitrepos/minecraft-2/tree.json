@@ -1,0 +1,414 @@
+[
+  {
+    "name": "minecraft2",
+    "path": "minecraft2",
+    "type": "dir",
+    "children": [
+      {
+        "name": "src",
+        "path": "minecraft2/src",
+        "type": "dir",
+        "children": [
+          {
+            "name": "core",
+            "path": "minecraft2/src/core",
+            "type": "dir",
+            "children": [
+              {
+                "name": "camera.cpp",
+                "path": "minecraft2/src/core/camera.cpp",
+                "type": "file"
+              },
+              {
+                "name": "camera.h",
+                "path": "minecraft2/src/core/camera.h",
+                "type": "file"
+              },
+              {
+                "name": "job_system.cpp",
+                "path": "minecraft2/src/core/job_system.cpp",
+                "type": "file"
+              },
+              {
+                "name": "job_system.h",
+                "path": "minecraft2/src/core/job_system.h",
+                "type": "file"
+              },
+              {
+                "name": "metrics.h",
+                "path": "minecraft2/src/core/metrics.h",
+                "type": "file"
+              },
+              {
+                "name": "profiler.cpp",
+                "path": "minecraft2/src/core/profiler.cpp",
+                "type": "file"
+              },
+              {
+                "name": "profiler.h",
+                "path": "minecraft2/src/core/profiler.h",
+                "type": "file"
+              },
+              {
+                "name": "window.cpp",
+                "path": "minecraft2/src/core/window.cpp",
+                "type": "file"
+              },
+              {
+                "name": "window.h",
+                "path": "minecraft2/src/core/window.h",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "logzilla",
+            "path": "minecraft2/src/logzilla",
+            "type": "dir",
+            "children": [
+              {
+                "name": "logzilla.c",
+                "path": "minecraft2/src/logzilla/logzilla.c",
+                "type": "file"
+              },
+              {
+                "name": "logzilla.h",
+                "path": "minecraft2/src/logzilla/logzilla.h",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "math",
+            "path": "minecraft2/src/math",
+            "type": "dir",
+            "children": [
+              {
+                "name": "asm",
+                "path": "minecraft2/src/math/asm",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "noise_avx2.asm",
+                    "path": "minecraft2/src/math/asm/noise_avx2.asm",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "noise_avx2.asm",
+                "path": "minecraft2/src/math/noise_avx2.asm",
+                "type": "file"
+              },
+              {
+                "name": "noise.cpp",
+                "path": "minecraft2/src/math/noise.cpp",
+                "type": "file"
+              },
+              {
+                "name": "noise.h",
+                "path": "minecraft2/src/math/noise.h",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "path": "minecraft2/src/render",
+            "type": "dir",
+            "children": [
+              {
+                "name": "raytracing",
+                "path": "minecraft2/src/render/raytracing",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "vulkan_raytracer.cpp",
+                    "path": "minecraft2/src/render/raytracing/vulkan_raytracer.cpp",
+                    "type": "file"
+                  },
+                  {
+                    "name": "vulkan_raytracer.h",
+                    "path": "minecraft2/src/render/raytracing/vulkan_raytracer.h",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "skybox",
+                "path": "minecraft2/src/render/skybox",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "skybox_renderer.cpp",
+                    "path": "minecraft2/src/render/skybox/skybox_renderer.cpp",
+                    "type": "file"
+                  },
+                  {
+                    "name": "skybox_renderer.h",
+                    "path": "minecraft2/src/render/skybox/skybox_renderer.h",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "debug_ui.cpp",
+                "path": "minecraft2/src/render/debug_ui.cpp",
+                "type": "file"
+              },
+              {
+                "name": "debug_ui.h",
+                "path": "minecraft2/src/render/debug_ui.h",
+                "type": "file"
+              },
+              {
+                "name": "free_list_allocator.h",
+                "path": "minecraft2/src/render/free_list_allocator.h",
+                "type": "file"
+              },
+              {
+                "name": "renderer_postprocess.cpp",
+                "path": "minecraft2/src/render/renderer_postprocess.cpp",
+                "type": "file"
+              },
+              {
+                "name": "renderer.cpp",
+                "path": "minecraft2/src/render/renderer.cpp",
+                "type": "file"
+              },
+              {
+                "name": "renderer.h",
+                "path": "minecraft2/src/render/renderer.h",
+                "type": "file"
+              },
+              {
+                "name": "shader_compiler.cpp",
+                "path": "minecraft2/src/render/shader_compiler.cpp",
+                "type": "file"
+              },
+              {
+                "name": "shader_compiler.h",
+                "path": "minecraft2/src/render/shader_compiler.h",
+                "type": "file"
+              },
+              {
+                "name": "texture_manager.cpp",
+                "path": "minecraft2/src/render/texture_manager.cpp",
+                "type": "file"
+              },
+              {
+                "name": "texture_manager.h",
+                "path": "minecraft2/src/render/texture_manager.h",
+                "type": "file"
+              },
+              {
+                "name": "vertex.h",
+                "path": "minecraft2/src/render/vertex.h",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_buffer.cpp",
+                "path": "minecraft2/src/render/vulkan_buffer.cpp",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_buffer.h",
+                "path": "minecraft2/src/render/vulkan_buffer.h",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_context.cpp",
+                "path": "minecraft2/src/render/vulkan_context.cpp",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_context.h",
+                "path": "minecraft2/src/render/vulkan_context.h",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_pipeline.cpp",
+                "path": "minecraft2/src/render/vulkan_pipeline.cpp",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_pipeline.h",
+                "path": "minecraft2/src/render/vulkan_pipeline.h",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_swapchain.cpp",
+                "path": "minecraft2/src/render/vulkan_swapchain.cpp",
+                "type": "file"
+              },
+              {
+                "name": "vulkan_swapchain.h",
+                "path": "minecraft2/src/render/vulkan_swapchain.h",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "textures",
+            "path": "minecraft2/src/textures",
+            "type": "dir",
+            "children": [
+              {
+                "name": "ambient",
+                "path": "minecraft2/src/textures/ambient",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "sun.asm",
+                    "path": "minecraft2/src/textures/ambient/sun.asm",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "blocks",
+                "path": "minecraft2/src/textures/blocks",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "dirt.png",
+                    "path": "minecraft2/src/textures/blocks/dirt.png",
+                    "type": "file"
+                  },
+                  {
+                    "name": "grass.png",
+                    "path": "minecraft2/src/textures/blocks/grass.png",
+                    "type": "file"
+                  },
+                  {
+                    "name": "stone.png",
+                    "path": "minecraft2/src/textures/blocks/stone.png",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "vendor",
+            "path": "minecraft2/src/vendor",
+            "type": "dir",
+            "children": [
+              {
+                "name": "stb_image.h",
+                "path": "minecraft2/src/vendor/stb_image.h",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "Volk",
+            "path": "minecraft2/src/Volk",
+            "type": "dir",
+            "children": [
+              {
+                "name": "volk.h",
+                "path": "minecraft2/src/Volk/volk.h",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "world",
+            "path": "minecraft2/src/world",
+            "type": "dir",
+            "children": [
+              {
+                "name": "asm",
+                "path": "minecraft2/src/world/asm",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "chunk_generate_avx2.asm",
+                    "path": "minecraft2/src/world/asm/chunk_generate_avx2.asm",
+                    "type": "file"
+                  },
+                  {
+                    "name": "chunk_mesh_avx2.asm",
+                    "path": "minecraft2/src/world/asm/chunk_mesh_avx2.asm",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "block_registry.cpp",
+                "path": "minecraft2/src/world/block_registry.cpp",
+                "type": "file"
+              },
+              {
+                "name": "block_registry.h",
+                "path": "minecraft2/src/world/block_registry.h",
+                "type": "file"
+              },
+              {
+                "name": "block.h",
+                "path": "minecraft2/src/world/block.h",
+                "type": "file"
+              },
+              {
+                "name": "chunk_manager.cpp",
+                "path": "minecraft2/src/world/chunk_manager.cpp",
+                "type": "file"
+              },
+              {
+                "name": "chunk_manager.h",
+                "path": "minecraft2/src/world/chunk_manager.h",
+                "type": "file"
+              },
+              {
+                "name": "chunk.cpp",
+                "path": "minecraft2/src/world/chunk.cpp",
+                "type": "file"
+              },
+              {
+                "name": "chunk.h",
+                "path": "minecraft2/src/world/chunk.h",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "main.cpp",
+            "path": "minecraft2/src/main.cpp",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "CMakeLists.txt",
+        "path": "minecraft2/CMakeLists.txt",
+        "type": "file"
+      }
+    ]
+  },
+  {
+    "name": ".gitignore",
+    "path": ".gitignore",
+    "type": "file"
+  },
+  {
+    "name": "LICENSE",
+    "path": "LICENSE",
+    "type": "file"
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file"
+  },
+  {
+    "name": "stats.json",
+    "path": "stats.json",
+    "type": "file"
+  },
+  {
+    "name": "tree.json",
+    "path": "tree.json",
+    "type": "file"
+  }
+]

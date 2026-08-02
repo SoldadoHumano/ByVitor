@@ -1,0 +1,21 @@
+{
+  "totalLines": 12940,
+  "languages": {
+    "TOML": {
+      "lines": 52,
+      "percentage": 0.401854714064915
+    },
+    "Others": {
+      "lines": 6575,
+      "percentage": 50.811437403400305
+    },
+    "Rust": {
+      "lines": 5765,
+      "percentage": 44.551777434312214
+    },
+    "JSON": {
+      "lines": 548,
+      "percentage": 4.234930448222566
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "totalLines": 16295,
+  "languages": {
+    "Others": {
+      "lines": 261,
+      "percentage": 1.6017183185026083
+    },
+    "C++": {
+      "lines": 14946,
+      "percentage": 91.72138692850568
+    },
+    "C": {
+      "lines": 79,
+      "percentage": 0.48481129180730287
+    },
+    "Assembly": {
+      "lines": 570,
+      "percentage": 3.4980055231666154
+    },
+    "JSON": {
+      "lines": 439,
+      "percentage": 2.694077938017797
+    }
+  }
+}

@@ -1,0 +1,527 @@
+[
+  {
+    "name": ".cargo",
+    "path": ".cargo",
+    "type": "dir",
+    "children": [
+      {
+        "name": "config.toml",
+        "path": ".cargo/config.toml",
+        "type": "file"
+      }
+    ]
+  },
+  {
+    "name": "assets",
+    "path": "assets",
+    "type": "dir",
+    "children": [
+      {
+        "name": "documentations",
+        "path": "assets/documentations",
+        "type": "dir",
+        "children": [
+          {
+            "name": "best_practices.md",
+            "path": "assets/documentations/best_practices.md",
+            "type": "file"
+          },
+          {
+            "name": "customization.md",
+            "path": "assets/documentations/customization.md",
+            "type": "file"
+          },
+          {
+            "name": "hosts.md",
+            "path": "assets/documentations/hosts.md",
+            "type": "file"
+          },
+          {
+            "name": "how_to_use.md",
+            "path": "assets/documentations/how_to_use.md",
+            "type": "file"
+          },
+          {
+            "name": "introduction.md",
+            "path": "assets/documentations/introduction.md",
+            "type": "file"
+          },
+          {
+            "name": "security.md",
+            "path": "assets/documentations/security.md",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "icons",
+        "path": "assets/icons",
+        "type": "dir",
+        "children": [
+          {
+            "name": "badge-check.svg",
+            "path": "assets/icons/badge-check.svg",
+            "type": "file"
+          },
+          {
+            "name": "book-open-check.svg",
+            "path": "assets/icons/book-open-check.svg",
+            "type": "file"
+          },
+          {
+            "name": "cable.svg",
+            "path": "assets/icons/cable.svg",
+            "type": "file"
+          },
+          {
+            "name": "check.svg",
+            "path": "assets/icons/check.svg",
+            "type": "file"
+          },
+          {
+            "name": "code-xml.svg",
+            "path": "assets/icons/code-xml.svg",
+            "type": "file"
+          },
+          {
+            "name": "code.svg",
+            "path": "assets/icons/code.svg",
+            "type": "file"
+          },
+          {
+            "name": "cpu.svg",
+            "path": "assets/icons/cpu.svg",
+            "type": "file"
+          },
+          {
+            "name": "ellipsis.svg",
+            "path": "assets/icons/ellipsis.svg",
+            "type": "file"
+          },
+          {
+            "name": "eye-off.svg",
+            "path": "assets/icons/eye-off.svg",
+            "type": "file"
+          },
+          {
+            "name": "eye.svg",
+            "path": "assets/icons/eye.svg",
+            "type": "file"
+          },
+          {
+            "name": "folder-open.svg",
+            "path": "assets/icons/folder-open.svg",
+            "type": "file"
+          },
+          {
+            "name": "folder.svg",
+            "path": "assets/icons/folder.svg",
+            "type": "file"
+          },
+          {
+            "name": "globe-lock.svg",
+            "path": "assets/icons/globe-lock.svg",
+            "type": "file"
+          },
+          {
+            "name": "globe-off.svg",
+            "path": "assets/icons/globe-off.svg",
+            "type": "file"
+          },
+          {
+            "name": "globe.svg",
+            "path": "assets/icons/globe.svg",
+            "type": "file"
+          },
+          {
+            "name": "gpu.svg",
+            "path": "assets/icons/gpu.svg",
+            "type": "file"
+          },
+          {
+            "name": "hard-drive-download.svg",
+            "path": "assets/icons/hard-drive-download.svg",
+            "type": "file"
+          },
+          {
+            "name": "hard-drive.svg",
+            "path": "assets/icons/hard-drive.svg",
+            "type": "file"
+          },
+          {
+            "name": "hat-glasses.svg",
+            "path": "assets/icons/hat-glasses.svg",
+            "type": "file"
+          },
+          {
+            "name": "heart-plus.svg",
+            "path": "assets/icons/heart-plus.svg",
+            "type": "file"
+          },
+          {
+            "name": "heart.svg",
+            "path": "assets/icons/heart.svg",
+            "type": "file"
+          },
+          {
+            "name": "house.svg",
+            "path": "assets/icons/house.svg",
+            "type": "file"
+          },
+          {
+            "name": "info.svg",
+            "path": "assets/icons/info.svg",
+            "type": "file"
+          },
+          {
+            "name": "key-round.svg",
+            "path": "assets/icons/key-round.svg",
+            "type": "file"
+          },
+          {
+            "name": "leaf.svg",
+            "path": "assets/icons/leaf.svg",
+            "type": "file"
+          },
+          {
+            "name": "lock-open.svg",
+            "path": "assets/icons/lock-open.svg",
+            "type": "file"
+          },
+          {
+            "name": "lock.svg",
+            "path": "assets/icons/lock.svg",
+            "type": "file"
+          },
+          {
+            "name": "log-out.svg",
+            "path": "assets/icons/log-out.svg",
+            "type": "file"
+          },
+          {
+            "name": "memory-stick.svg",
+            "path": "assets/icons/memory-stick.svg",
+            "type": "file"
+          },
+          {
+            "name": "menu.svg",
+            "path": "assets/icons/menu.svg",
+            "type": "file"
+          },
+          {
+            "name": "monitor-cog.svg",
+            "path": "assets/icons/monitor-cog.svg",
+            "type": "file"
+          },
+          {
+            "name": "monitor.svg",
+            "path": "assets/icons/monitor.svg",
+            "type": "file"
+          },
+          {
+            "name": "moon.svg",
+            "path": "assets/icons/moon.svg",
+            "type": "file"
+          },
+          {
+            "name": "network.svg",
+            "path": "assets/icons/network.svg",
+            "type": "file"
+          },
+          {
+            "name": "paintbrush.svg",
+            "path": "assets/icons/paintbrush.svg",
+            "type": "file"
+          },
+          {
+            "name": "pencil-sparkles.svg",
+            "path": "assets/icons/pencil-sparkles.svg",
+            "type": "file"
+          },
+          {
+            "name": "pencil.svg",
+            "path": "assets/icons/pencil.svg",
+            "type": "file"
+          },
+          {
+            "name": "power.svg",
+            "path": "assets/icons/power.svg",
+            "type": "file"
+          },
+          {
+            "name": "save.svg",
+            "path": "assets/icons/save.svg",
+            "type": "file"
+          },
+          {
+            "name": "screen-share.svg",
+            "path": "assets/icons/screen-share.svg",
+            "type": "file"
+          },
+          {
+            "name": "server-plus.svg",
+            "path": "assets/icons/server-plus.svg",
+            "type": "file"
+          },
+          {
+            "name": "server.svg",
+            "path": "assets/icons/server.svg",
+            "type": "file"
+          },
+          {
+            "name": "settings.svg",
+            "path": "assets/icons/settings.svg",
+            "type": "file"
+          },
+          {
+            "name": "shield.svg",
+            "path": "assets/icons/shield.svg",
+            "type": "file"
+          },
+          {
+            "name": "star-plus.svg",
+            "path": "assets/icons/star-plus.svg",
+            "type": "file"
+          },
+          {
+            "name": "star.svg",
+            "path": "assets/icons/star.svg",
+            "type": "file"
+          },
+          {
+            "name": "sun.svg",
+            "path": "assets/icons/sun.svg",
+            "type": "file"
+          },
+          {
+            "name": "terminal.svg",
+            "path": "assets/icons/terminal.svg",
+            "type": "file"
+          },
+          {
+            "name": "trash-2.svg",
+            "path": "assets/icons/trash-2.svg",
+            "type": "file"
+          },
+          {
+            "name": "trash.svg",
+            "path": "assets/icons/trash.svg",
+            "type": "file"
+          },
+          {
+            "name": "triangle-alert.svg",
+            "path": "assets/icons/triangle-alert.svg",
+            "type": "file"
+          },
+          {
+            "name": "undo-2.svg",
+            "path": "assets/icons/undo-2.svg",
+            "type": "file"
+          },
+          {
+            "name": "user.svg",
+            "path": "assets/icons/user.svg",
+            "type": "file"
+          },
+          {
+            "name": "x.svg",
+            "path": "assets/icons/x.svg",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "images",
+        "path": "assets/images",
+        "type": "dir",
+        "children": [
+          {
+            "name": "rustty_icon.ico",
+            "path": "assets/images/rustty_icon.ico",
+            "type": "file"
+          },
+          {
+            "name": "rustty_icon.png",
+            "path": "assets/images/rustty_icon.png",
+            "type": "file"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "src",
+    "path": "src",
+    "type": "dir",
+    "children": [
+      {
+        "name": "config",
+        "path": "src/config",
+        "type": "dir",
+        "children": [
+          {
+            "name": "client.rs",
+            "path": "src/config/client.rs",
+            "type": "file"
+          },
+          {
+            "name": "crypto.rs",
+            "path": "src/config/crypto.rs",
+            "type": "file"
+          },
+          {
+            "name": "mod.rs",
+            "path": "src/config/mod.rs",
+            "type": "file"
+          },
+          {
+            "name": "protected_mem.rs",
+            "path": "src/config/protected_mem.rs",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "net",
+        "path": "src/net",
+        "type": "dir",
+        "children": [
+          {
+            "name": "icmp.rs",
+            "path": "src/net/icmp.rs",
+            "type": "file"
+          },
+          {
+            "name": "mod.rs",
+            "path": "src/net/mod.rs",
+            "type": "file"
+          },
+          {
+            "name": "serial.rs",
+            "path": "src/net/serial.rs",
+            "type": "file"
+          },
+          {
+            "name": "ssh.rs",
+            "path": "src/net/ssh.rs",
+            "type": "file"
+          },
+          {
+            "name": "telnet.rs",
+            "path": "src/net/telnet.rs",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "terminal",
+        "path": "src/terminal",
+        "type": "dir",
+        "children": [
+          {
+            "name": "grid.rs",
+            "path": "src/terminal/grid.rs",
+            "type": "file"
+          },
+          {
+            "name": "mod.rs",
+            "path": "src/terminal/mod.rs",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "ui",
+        "path": "src/ui",
+        "type": "dir",
+        "children": [
+          {
+            "name": "customization.rs",
+            "path": "src/ui/customization.rs",
+            "type": "file"
+          },
+          {
+            "name": "documentation.rs",
+            "path": "src/ui/documentation.rs",
+            "type": "file"
+          },
+          {
+            "name": "icons.rs",
+            "path": "src/ui/icons.rs",
+            "type": "file"
+          },
+          {
+            "name": "mod.rs",
+            "path": "src/ui/mod.rs",
+            "type": "file"
+          },
+          {
+            "name": "settings.rs",
+            "path": "src/ui/settings.rs",
+            "type": "file"
+          },
+          {
+            "name": "svg_renderer.rs",
+            "path": "src/ui/svg_renderer.rs",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "app.rs",
+        "path": "src/app.rs",
+        "type": "file"
+      },
+      {
+        "name": "main.rs",
+        "path": "src/main.rs",
+        "type": "file"
+      },
+      {
+        "name": "terminal_app.rs",
+        "path": "src/terminal_app.rs",
+        "type": "file"
+      }
+    ]
+  },
+  {
+    "name": ".gitignore",
+    "path": ".gitignore",
+    "type": "file"
+  },
+  {
+    "name": "build.rs",
+    "path": "build.rs",
+    "type": "file"
+  },
+  {
+    "name": "Cargo.lock",
+    "path": "Cargo.lock",
+    "type": "file"
+  },
+  {
+    "name": "Cargo.toml",
+    "path": "Cargo.toml",
+    "type": "file"
+  },
+  {
+    "name": "LICENSE",
+    "path": "LICENSE",
+    "type": "file"
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file"
+  },
+  {
+    "name": "stats.json",
+    "path": "stats.json",
+    "type": "file"
+  },
+  {
+    "name": "tree.json",
+    "path": "tree.json",
+    "type": "file"
+  }
+]
