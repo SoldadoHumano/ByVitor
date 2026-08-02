@@ -82,7 +82,7 @@ public class Main {
         meuNote.carregarBateria();
     }
 }</code></pre>
-</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"DaXCG0LbgXk5GMNZvNxpK"}
+</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"ddIVc4yJHyvtElJUgNaAC"}
 4:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}]
 5:["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}]
 6:["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}]
