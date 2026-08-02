@@ -71,7 +71,7 @@ Para manter a segurança do seu sistema, utilize o contexto estático apenas nos
     <div class="callout__text">
         Se a sua lógica de inicialização estática for complexa, use um <code>static { ... }</code> block. Ele garante que a configuração ocorra uma única vez, de forma atômica, assim que a classe for acessada pela primeira vez.
     </div>
-</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7t0IJ3xZa6yFJcFpa_QZ_"}
+</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"DaXCG0LbgXk5GMNZvNxpK"}
 4:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}]
 5:["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}]
 6:["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}]

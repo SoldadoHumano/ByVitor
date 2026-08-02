@@ -102,7 +102,7 @@ public class UIButton {
 * **Static Nested:** Organização lógica; não acessa o `this` da classe externa.
 * **Inner Class:** Acesso total à classe pai; depende de uma instância.
 * **Anonymous:** Implementações rápidas e descartáveis; muito comum em códigos legados ou eventos de UI.
-* **Arquitetura:** Use classes aninhadas para esconder detalhes que só interessam àquela classe específica, mantendo sua API limpa.0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7t0IJ3xZa6yFJcFpa_QZ_"}
+* **Arquitetura:** Use classes aninhadas para esconder detalhes que só interessam àquela classe específica, mantendo sua API limpa.0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"DaXCG0LbgXk5GMNZvNxpK"}
 4:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}]
 5:["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}]
 6:["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}]
