@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[69248,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js","/_next/static/chunks/1izei5wiqca2o.js","/_next/static/chunks/2lb831f2609f6.js","/_next/static/chunks/3oco9hyri5ben.js","/_next/static/chunks/0_s7658auhrny.js"],"default"]
-9:I[97367,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
+2:I[69248,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js","/ByVitor/_next/static/chunks/1izei5wiqca2o.js","/ByVitor/_next/static/chunks/2lb831f2609f6.js","/ByVitor/_next/static/chunks/3oco9hyri5ben.js","/ByVitor/_next/static/chunks/0_s7658auhrny.js"],"default"]
+9:I[97367,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
 a:"$Sreact.suspense"
-:HL["/_next/static/chunks/1e0n14egb9bme.css","style"]
+:HL["/ByVitor/_next/static/chunks/1e0n14egb9bme.css","style"]
 3:Td2a,O **Encapsulamento** é um dos pilares fundamentais da POO. Ele serve para proteger os dados de uma classe contra acessos indevidos ou modificações acidentais, garantindo que o objeto tenha controle total sobre seu próprio estado.
 
 ## O Conceito de "Caixa Preta"
@@ -80,10 +80,10 @@ public class Sistema {
         System.out.println("Idade final: " + user.getIdade());
     }
 }</code></pre>
-</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"1Ya_alPIE0WsSAjlVk5xg"}
-4:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}]
-5:["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}]
-6:["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}]
-7:["$","script","script-2",{"src":"/_next/static/chunks/0_s7658auhrny.js","async":true}]
+</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6EfzbX-zBicQ9worpVbvR"}
+4:["$","link","0",{"rel":"stylesheet","href":"/ByVitor/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}]
+5:["$","script","script-0",{"src":"/ByVitor/_next/static/chunks/2lb831f2609f6.js","async":true}]
+6:["$","script","script-1",{"src":"/ByVitor/_next/static/chunks/3oco9hyri5ben.js","async":true}]
+7:["$","script","script-2",{"src":"/ByVitor/_next/static/chunks/0_s7658auhrny.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
 b:null

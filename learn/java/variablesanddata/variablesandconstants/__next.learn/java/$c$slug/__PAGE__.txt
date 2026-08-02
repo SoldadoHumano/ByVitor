@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[69248,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js","/_next/static/chunks/1izei5wiqca2o.js","/_next/static/chunks/2lb831f2609f6.js","/_next/static/chunks/3oco9hyri5ben.js","/_next/static/chunks/0_s7658auhrny.js"],"default"]
-9:I[97367,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
+2:I[69248,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js","/ByVitor/_next/static/chunks/1izei5wiqca2o.js","/ByVitor/_next/static/chunks/2lb831f2609f6.js","/ByVitor/_next/static/chunks/3oco9hyri5ben.js","/ByVitor/_next/static/chunks/0_s7658auhrny.js"],"default"]
+9:I[97367,["/ByVitor/_next/static/chunks/2hsgrf2iwerir.js","/ByVitor/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
 a:"$Sreact.suspense"
-:HL["/_next/static/chunks/1e0n14egb9bme.css","style"]
+:HL["/ByVitor/_next/static/chunks/1e0n14egb9bme.css","style"]
 3:Tcd2,Para que um programa processe informações, ele precisa armazená-las temporariamente. Imagine a memória do computador como um imenso armário cheio de gavetas: as **Variáveis** e **Constantes** são as etiquetas que colocamos nessas gavetas para saber o que há dentro delas e como podemos usar esse conteúdo.
 
 ## 1. O que são Variáveis?
@@ -62,10 +62,10 @@ double valorFinal = saldoBancario - TAXA_DE_SAQUE;
 System.out.println("Saldo Atual: " + saldoBancario);
 System.out.println("Taxa Fixa: " + TAXA_DE_SAQUE);
 System.out.println("Valor após saque: " + valorFinal);</code></pre>
-</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"1Ya_alPIE0WsSAjlVk5xg"}
-4:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}]
-5:["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}]
-6:["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}]
-7:["$","script","script-2",{"src":"/_next/static/chunks/0_s7658auhrny.js","async":true}]
+</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],["$L4","$L5","$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6EfzbX-zBicQ9worpVbvR"}
+4:["$","link","0",{"rel":"stylesheet","href":"/ByVitor/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}]
+5:["$","script","script-0",{"src":"/ByVitor/_next/static/chunks/2lb831f2609f6.js","async":true}]
+6:["$","script","script-1",{"src":"/ByVitor/_next/static/chunks/3oco9hyri5ben.js","async":true}]
+7:["$","script","script-2",{"src":"/ByVitor/_next/static/chunks/0_s7658auhrny.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
 b:null
