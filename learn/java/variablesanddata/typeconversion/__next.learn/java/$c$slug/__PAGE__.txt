@@ -1,0 +1,61 @@
+1:"$Sreact.fragment"
+2:I[69248,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js","/_next/static/chunks/1izei5wiqca2o.js","/_next/static/chunks/2lb831f2609f6.js","/_next/static/chunks/3oco9hyri5ben.js","/_next/static/chunks/0_s7658auhrny.js"],"default"]
+5:I[97367,["/_next/static/chunks/2hsgrf2iwerir.js","/_next/static/chunks/3884zvvlec-vv.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+:HL["/_next/static/chunks/1e0n14egb9bme.css","style"]
+3:Tb91,A conversão de tipos ocorre quando atribuímos o valor de um tipo de dado a outro tipo. No Java, existem dois tipos principais de conversão, e entender a diferença entre eles é crucial para evitar perda de dados e garantir a segurança do seu software.
+
+## 1. Conversão Implícita (Widening Casting)
+A conversão implícita acontece de forma automática pelo Java. Ela ocorre quando passamos um valor de um tipo **menor** para um tipo **maior**, onde não há risco de perder informações.
+
+**Exemplo:** Passar um `int` (32 bits) para um `double` (64 bits). Como o `double` é maior e suporta decimais, o Java faz a transição silenciosamente.
+
+**Ordem:** `byte` -> `short` -> `char` -> `int` -> `long` -> `float` -> `double`.
+
+
+
+## 2. Conversão Explícita (Narrowing Casting)
+A conversão explícita deve ser feita manualmente pelo programador. Ela ocorre quando tentamos passar um valor de um tipo **maior** para um tipo **menor**. 
+
+**Risco:** Como você está tentando "espremer" um dado grande em um espaço pequeno, pode haver **perda de precisão** (como transformar `9.99` em `10`).
+
+**Sintaxe:** Você deve colocar o tipo desejado entre parênteses antes do valor.
+
+## 3. Conversão de Strings para Números
+Muitas vezes, dados vindos de formulários ou arquivos chegam como Texto (`String`). Para realizar cálculos, precisamos convertê-los usando classes utilitárias (como `Integer` ou `Double`).
+
+<div class="callout callout--tip">
+    <div class="callout__title">💡 Boas Práticas e Segurança</div>
+    <div class="callout__text">
+        Sempre que realizar uma conversão explícita (Narrowing), verifique se o valor original cabe no tipo de destino. Converter um <code>long</code> muito grande para um <code>int</code> pode resultar em um número completamente diferente (overflow), o que gera bugs matemáticos graves e difíceis de rastrear.
+    </div>
+</div>
+
+### Exemplo Prático em Java
+
+Veja como aplicar as conversões no seu código de forma segura:
+
+<div class="code-block">
+    <div class="code-block__header">
+        <span>Conversão de Tipos</span>
+        <button class="code-block__copy" onclick="copyCode(this)">Copiar</button>
+    </div>
+    <pre><code>// 1. Conversão Implícita (Automática)
+int numeroInteiro = 9;
+double numeroDouble = numeroInteiro; // O Java converte automaticamente para 9.0
+
+// 2. Conversão Explícita (Manual)
+double notaOriginal = 9.78;
+int notaArredondada = (int) notaOriginal; // O valor será 9 (perda das casas decimais)
+
+// 3. Conversão de String para Tipo Primitivo
+String textoValor = "150";
+int valorConvertido = Integer.parseInt(textoValor); // Transforma o texto "150" no número 150
+
+// Exibindo resultados
+System.out.println("Inteiro para Double: " + numeroDouble);
+System.out.println("Double para Int: " + notaArredondada);
+System.out.println("Soma com String convertida: " + (valorConvertido + 50));</code></pre>
+</div>0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"animate-fade-in","children":["$undefined",["$","$L2",null,{"content":"$3"}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1e0n14egb9bme.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/2lb831f2609f6.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/3oco9hyri5ben.js","async":true}],["$","script","script-2",{"src":"/_next/static/chunks/0_s7658auhrny.js","async":true}]],"$L4"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"1Ya_alPIE0WsSAjlVk5xg"}
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null
